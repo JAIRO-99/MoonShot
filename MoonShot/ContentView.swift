@@ -2,95 +2,11 @@
 //  ContentView.swift
 //  MoonShot
 //
-//  Created by New on 4/12/23.
+//  Created by New on 12/23.
 //
-/*
- Image("pexel")
- .resizable()
- .scaledToFill()
- .frame(width: 300,height: 300)
- */
-/*
- ScrollView(.horizontal){
-     LazyHStack(spacing: 10) {
-        
-         ForEach(0..<100){
-             CustomText("Item \($0)")
-                 .font(.title)
-         }
-     }
- }
- */
-/*
-NavigationStack{
-    NavigationLink{
-        Text("Detail view")
-    }label: {
-        VStack{
-            Text("This is the label")
-            Text("So is this")
-            Image(systemName: "face.smiling")
-        }
-        .font(.title)
-    }
-    .navigationTitle("SwiftUI")
-}
-*/
-/*
-NavigationStack{
-    List(0..<100){ row in
-        NavigationLink("Row \(row)"){
-            Text("Detail \(row)")
-        }
-    }
-    .navigationTitle("SwiftUI")
-}
-*/
+
 import SwiftUI
 
-
-/*
-struct User: Codable {
-    let name: String
-    let address: Address
-}
-struct Address: Codable {
-    let street: String
-    let city: String
-}
-*/
-/*
-Button("Decode JSON"){
-    let input = """
-{
-"name": "Taylor Swift",
-"address": {
-    "street": "555, Taylor Swift Avenue",
-    "city": "Nashville"
-}
-}
-"""
-    let data = Data(input.utf8)
-    let decoder = JSONDecoder()
-    if let user = try? decoder.decode(User.self, from: data){
-        print(user.address.city)
-    }
-}
-*/ // decodificar JSON
-/*
-let layout = [
-    GridItem(.adaptive(minimum: 80, maximum: 120))
-]
-*/ //lazyvgrid
-/*
-ScrollView(.horizontal){
-    LazyHGrid(rows: layout){
-        ForEach(0..<1000){
-            Text("Item \($0)")
-        }
-    }
-}
-*/ //body lazygrid
 struct ContentView: View {
     let columns = [GridItem(.adaptive(minimum: 150))]
     let astronauts:[String: Astronaut] = Bundle.main.decode("astronauts.json")
